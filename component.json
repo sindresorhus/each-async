@@ -1,0 +1,23 @@
+{
+  "name": "each-async",
+  "version": "0.0.0",
+  "description": "Async parallel iterator",
+  "license": "MIT",
+  "main": "each-async.js",
+  "repo": "sindresorhus/each-async",
+  "scripts": ["each-async.js"],
+  "keywords": [
+    "each",
+    "async",
+    "asynchronous",
+    "iteration",
+    "iterate",
+    "loop",
+    "foreach",
+    "parallel",
+    "concurrent",
+    "array",
+    "flow",
+    "control flow"
+  ]
+}

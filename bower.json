@@ -1,0 +1,26 @@
+{
+  "name": "each-async",
+  "version": "0.0.0",
+  "description": "Async parallel iterator",
+  "main": "each-async.js",
+  "keywords": [
+    "each",
+    "async",
+    "asynchronous",
+    "iteration",
+    "iterate",
+    "loop",
+    "foreach",
+    "parallel",
+    "concurrent",
+    "array",
+    "flow",
+    "control flow"
+  ],
+  "ignore": [
+    ".*",
+    "test.js",
+    "component.json",
+    "package.json"
+  ]
+}
