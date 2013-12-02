@@ -61,6 +61,8 @@
 
 	if (typeof module !== 'undefined' && module.exports) {
 		module.exports = each;
+	} else if (typeof define === 'function' && define.amd) {
+		define(function() { return each; });
 	} else {
 		window.eachAsync = each;
 	}
