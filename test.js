@@ -20,12 +20,12 @@ it('run each concurrently', function (done) {
 });
 
 it('stop iteration on first error', function (done) {
-	var i = 0;
+	var j = 0;
 	each([1,2,3], function (el, i, next) {
-		i++;
+		j++;
 		next(true);
 	}, function () {
-		assert.strictEqual(i, 0);
+		assert.strictEqual(j, 1);
 		done();
 	});
 });
