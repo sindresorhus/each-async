@@ -4,7 +4,7 @@ var assert = require('assert');
 var each = require('./each-async');
 
 
-it('run each concurrently', function (done) {
+it('async tasks will run parallelly', function (done) {
 	var fixture = [1,2,3,4,5,6,7,8,9,10];
 	var actual = [];
 	each(fixture, function (el, i, next) {
@@ -15,6 +15,21 @@ it('run each concurrently', function (done) {
 	}, function () {
 		assert.equal(actual.length, fixture.length);
 		assert.notDeepEqual(actual, fixture);
+		done();
+	});
+});
+
+it('sync tasks will still run serially', function (done) {
+	var fixture = [1,2,3,4,5,6,7,8,9,10];
+	var actual = [];
+	each(fixture, function (el, i, next) {
+		var i = Math.floor(Math.random() * 10000);
+		while(i--) {}
+		actual.push(el);
+		next();
+	}, function () {
+		assert.equal(actual.length, fixture.length);
+		assert.deepEqual(actual, fixture);
 		done();
 	});
 });
