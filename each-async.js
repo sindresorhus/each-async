@@ -26,6 +26,9 @@
 
 	function each(arr, next, cb) {
 		var failed = false;
+		var count = 0;
+		var i = 0;
+		var l = arr.length;
 
 		cb = cb || function () {};
 
@@ -41,21 +44,23 @@
 			return cb();
 		}
 
-		for (var i = 0, l = arr.length; i < l; i++) {
-			next(arr[i], i, once(function (err) {
-				if (failed) {
-					return;
-				}
+		function callback(err) {
+			if (failed) {
+				return;
+			}
 
-				if (err !== undefined && err !== null) {
-					failed = true;
-					return cb(err);
-				}
+			if (err !== undefined && err !== null) {
+				failed = true;
+				return cb(err);
+			}
 
-				if (i === l) {
-					return cb();
-				}
-			}));
+			if (++count === l) {
+				return cb();
+			}
+		}
+
+		for (; i < l; i++) {
+			next(arr[i], i, once(callback));
 		}
 	}
 

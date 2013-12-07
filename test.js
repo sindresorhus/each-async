@@ -13,6 +13,7 @@ it('run each concurrently', function (done) {
 			next();
 		}, Math.random() * 2000);
 	}, function () {
+		assert.equal(actual.length, fixture.length);
 		assert.notDeepEqual(actual, fixture);
 		done();
 	});
