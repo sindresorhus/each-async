@@ -1,8 +1,12 @@
 # each-async [![Build Status](https://secure.travis-ci.org/sindresorhus/each-async.png?branch=master)](http://travis-ci.org/sindresorhus/each-async)
 
-> Async parallel iterator
+> Async parallel iterator (async forEach)
 
-Like [async.each](https://github.com/caolan/async#eacharr-iterator-callback), but smaller.
+Like [async.each()](https://github.com/caolan/async#eacharr-iterator-callback), but smaller.
+
+I often use `async.each()` for doing async operations when iterating, but I almost never use the other gadzillion methods in `async`.
+
+Async iteration is one of the most used async control flow patterns.
 
 
 ## Install
