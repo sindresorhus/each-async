@@ -1,6 +1,6 @@
 # each-async [![Build Status](https://secure.travis-ci.org/sindresorhus/each-async.png?branch=master)](http://travis-ci.org/sindresorhus/each-async)
 
-> Async parallel iterator (async forEach)
+> Async concurrent iterator (async forEach)
 
 Like [async.each()](https://github.com/caolan/async#eacharr-iterator-callback), but smaller.
 
@@ -87,7 +87,7 @@ A function which is called for each item in the array with the following argumen
 - `index`: the current index
 - `done([error])`: call this when you're done with an optional error. Supplying anything other than `undefined`/`null` will stop the iteration.
 
-Note that order is not guaranteed since each item is handled in parallel.
+Note that order is not guaranteed since each item is handled concurrently.
 
 #### finishedCallback(error)
 
