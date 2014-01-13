@@ -1,7 +1,7 @@
 {
   "name": "each-async",
   "version": "0.1.1",
-  "description": "Async parallel iterator",
+  "description": "Async concurrent iterator",
   "license": "MIT",
   "main": "each-async.js",
   "repository": "sindresorhus/each-async",
@@ -11,7 +11,7 @@
     "url": "http://sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "mocha"
@@ -34,6 +34,6 @@
     "control flow"
   ],
   "devDependencies": {
-    "mocha": "~1.14.0"
+    "mocha": "*"
   }
 }
