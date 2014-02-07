@@ -1,6 +1,6 @@
 /*!
 	each-async
-	Async parallel iterator
+	Async concurrent iterator (async forEach)
 	https://github.com/sindresorhus/each-async
 	by Sindre Sorhus
 	MIT License
@@ -27,8 +27,6 @@
 	function each(arr, next, cb) {
 		var failed = false;
 		var count = 0;
-		var i = 0;
-		var l = arr.length;
 
 		cb = cb || function () {};
 
@@ -40,7 +38,9 @@
 			throw new TypeError('Second argument must be a function');
 		}
 
-		if (!arr.length) {
+		var len = arr.length;
+
+		if (!len) {
 			return cb();
 		}
 
@@ -54,12 +54,12 @@
 				return cb(err);
 			}
 
-			if (++count === l) {
+			if (++count === len) {
 				return cb();
 			}
 		}
 
-		for (; i < l; i++) {
+		for (var i = 0; i < len; i++) {
 			next(arr[i], i, once(callback));
 		}
 	}

@@ -2,7 +2,7 @@
 
 > Async concurrent iterator (async forEach)
 
-Like [async.each()](https://github.com/caolan/async#eacharr-iterator-callback), but smaller.
+Like [async.each()](https://github.com/caolan/async#eacharr-iterator-callback), but tiny.
 
 I often use `async.each()` for doing async operations when iterating, but I almost never use the other gadzillion methods in `async`.
 
@@ -35,27 +35,6 @@ component install sindresorhus/each-async
 ## Examples
 
 ### Node.js
-
-```js
-var eachAsync = require('each-async');
-
-eachAsync(['foo','bar','baz'], function (item, index, done) {
-	console.log(item, index);
-	done();
-}, function (error) {
-	console.log('finished');
-});
-//=> foo 0
-//=> bar 1
-//=> baz 2
-//=> finished
-```
-
-### Bower
-
-```html
-<script src="bower_components/each-async/each-async.js"></script>
-```
 
 ```js
 eachAsync(['foo','bar','baz'], function (item, index, done) {

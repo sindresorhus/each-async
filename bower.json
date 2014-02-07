@@ -1,7 +1,7 @@
 {
   "name": "each-async",
   "version": "0.1.0",
-  "description": "Async parallel iterator",
+  "description": "Async concurrent iterator (async forEach)",
   "main": "each-async.js",
   "keywords": [
     "each",
