@@ -1,6 +1,6 @@
 {
   "name": "each-async",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Async concurrent iterator (async forEach)",
   "main": "each-async.js",
   "keywords": [
