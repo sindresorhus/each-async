@@ -1,4 +1,4 @@
-# each-async [![Build Status](https://secure.travis-ci.org/sindresorhus/each-async.png?branch=master)](http://travis-ci.org/sindresorhus/each-async)
+# each-async [![Build Status](https://travis-ci.org/sindresorhus/each-async.svg?branch=master)](https://travis-ci.org/sindresorhus/each-async)
 
 > Async concurrent iterator (async forEach)
 
@@ -13,26 +13,20 @@ Async iteration is one of the most used async control flow patterns.
 
 Download [manually](https://github.com/sindresorhus/each-async/releases) or with a package-manager.
 
-#### [npm](https://npmjs.org/package/each-async)
-
-```
-npm install --save each-async
+```bash
+$ npm install --save each-async
 ```
 
-#### [Bower](http://bower.io)
-
-```
-bower install --save each-async
+```bash
+$ bower install --save each-async
 ```
 
-#### [Component](https://github.com/component/component)
-
-```
-component install sindresorhus/each-async
+```bash
+$ component install sindresorhus/each-async
 ```
 
 
-## Examples
+## Usage
 
 ### Node.js
 
@@ -75,4 +69,4 @@ A function which is called when the iteration is finished or on the first error.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
