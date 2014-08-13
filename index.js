@@ -18,7 +18,8 @@ module.exports = function (arr, next, cb) {
 	var len = arr.length;
 
 	if (!len) {
-		return cb();
+		cb();
+		return;
 	}
 
 	function callback(err) {
@@ -28,15 +29,17 @@ module.exports = function (arr, next, cb) {
 
 		if (err !== undefined && err !== null) {
 			failed = true;
-			return cb(err);
+			cb(err);
+			return;
 		}
 
 		if (++count === len) {
-			return cb();
+			cb();
+			return;
 		}
 	}
 
 	for (var i = 0; i < len; i++) {
-		next(arr[i], i, onetime(callback, true));
+		setImmediate(next, arr[i], i, onetime(callback, true));
 	}
 };
