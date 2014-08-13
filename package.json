@@ -1,9 +1,8 @@
 {
   "name": "each-async",
   "version": "0.1.3",
-  "description": "Async concurrent iterator",
+  "description": "Async concurrent iterator (async forEach)",
   "license": "MIT",
-  "main": "each-async.js",
   "repository": "sindresorhus/each-async",
   "author": {
     "name": "Sindre Sorhus",
@@ -17,7 +16,7 @@
     "test": "mocha"
   },
   "files": [
-    "each-async.js"
+    "index.js"
   ],
   "keywords": [
     "each",
@@ -33,6 +32,9 @@
     "flow",
     "control flow"
   ],
+  "dependencies": {
+    "onetime": "^1.0.0"
+  },
   "devDependencies": {
     "mocha": "*"
   }

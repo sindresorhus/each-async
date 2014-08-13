@@ -1,8 +1,6 @@
-/*global it */
 'use strict';
 var assert = require('assert');
-var each = require('./each-async');
-
+var each = require('./');
 
 it('async tasks will run parallelly', function (done) {
 	var fixture = [1,2,3,4,5,6,7,8,9,10];

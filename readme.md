@@ -11,26 +11,16 @@ Async iteration is one of the most used async control flow patterns.
 
 ## Install
 
-Download [manually](https://github.com/sindresorhus/each-async/releases) or with a package-manager.
-
-```bash
+```sh
 $ npm install --save each-async
-```
-
-```bash
-$ bower install --save each-async
-```
-
-```bash
-$ component install sindresorhus/each-async
 ```
 
 
 ## Usage
 
-### Node.js
-
 ```js
+var eachAsync = require('each-async');
+
 eachAsync(['foo','bar','baz'], function (item, index, done) {
 	console.log(item, index);
 	done();
@@ -69,4 +59,4 @@ A function which is called when the iteration is finished or on the first error.
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)
