@@ -1,6 +1,6 @@
 {
   "name": "each-async",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "Async concurrent iterator (async forEach)",
   "license": "MIT",
   "repository": "sindresorhus/each-async",
