@@ -1,5 +1,6 @@
 'use strict';
 var onetime = require('onetime');
+require('setimmediate');
 
 module.exports = function (arr, next, cb) {
 	var failed = false;
