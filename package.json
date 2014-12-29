@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "onetime": "^1.0.0",
-    "setimmediate": "^1.0.2"
+    "set-immediate-shim": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*"

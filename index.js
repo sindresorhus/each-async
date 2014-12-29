@@ -1,6 +1,6 @@
 'use strict';
 var onetime = require('onetime');
-require('setimmediate');
+var setImmediateShim = require('set-immediate-shim');
 
 module.exports = function (arr, next, cb) {
 	var failed = false;
@@ -41,6 +41,6 @@ module.exports = function (arr, next, cb) {
 	}
 
 	for (var i = 0; i < len; i++) {
-		setImmediate(next, arr[i], i, onetime(callback, true));
+		setImmediateShim(next, arr[i], i, onetime(callback, true));
 	}
 };
