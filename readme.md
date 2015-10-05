@@ -11,7 +11,7 @@ Async iteration is one of the most used async control flow patterns.
 
 ## Install
 
-```sh
+```
 $ npm install --save each-async
 ```
 
@@ -19,18 +19,18 @@ $ npm install --save each-async
 ## Usage
 
 ```js
-var eachAsync = require('each-async');
+const eachAsync = require('each-async');
 
-eachAsync(['foo','bar','baz'], function (item, index, done) {
+eachAsync(['foo','bar','baz'], (item, index, done) => {
 	console.log(item, index);
 	done();
-}, function (error) {
+}, error => {
 	console.log('finished');
 });
-//=> foo 0
-//=> bar 1
-//=> baz 2
-//=> finished
+//=> 'foo 0'
+//=> 'bar 1'
+//=> 'baz 2'
+//=> 'finished'
 ```
 
 
