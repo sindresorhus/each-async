@@ -7,13 +7,13 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha --timeout 20000"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
@@ -37,6 +37,7 @@
     "set-immediate-shim": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "*",
+    "xo": "*"
   }
 }

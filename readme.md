@@ -36,15 +36,19 @@ eachAsync(['foo','bar','baz'], (item, index, done) => {
 
 ## API
 
-### eachAsync(array, callback, finishedCallback)
+### eachAsync(input, callback, finishedCallback)
 
-#### array
+#### input
 
-The array you want to iterate.
+Type: `Array`
+
+Array you want to iterate.
 
 #### callback(item, index, done)
 
-A function which is called for each item in the array with the following arguments:
+Type: `Function`
+
+Called for each item in the array with the following arguments:
 
 - `item`: the current item in the array
 - `index`: the current index
@@ -54,9 +58,11 @@ Note that order is not guaranteed since each item is handled concurrently.
 
 #### finishedCallback(error)
 
-A function which is called when the iteration is finished or on the first error. First argument is the error passed from `done()` in the `callback`.
+Type: `Function`
+
+Called when the iteration is finished or on the first error. First argument is the error passed from `done()` in the `callback`.
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

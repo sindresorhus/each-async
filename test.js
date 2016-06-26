@@ -1,29 +1,30 @@
-'use strict';
-var assert = require('assert');
-var each = require('./');
+import test from 'ava';
+import m from './';
 
-it('async tasks will run parallelly', function (done) {
-	var fixture = [1,2,3,4,5,6,7,8,9,10];
-	var actual = [];
-	each(fixture, function (el, i, next) {
-		setTimeout(function () {
+test.cb('async tasks will run parallelly', t => {
+	const fixture = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+	const actual = [];
+
+	m(fixture, (el, i, next) => {
+		setTimeout(() => {
 			actual.push(el);
 			next();
 		}, Math.random() * 2000);
-	}, function () {
-		assert.equal(actual.length, fixture.length);
-		assert.notDeepEqual(actual, fixture);
-		done();
+	}, () => {
+		t.is(actual.length, fixture.length);
+		t.notDeepEqual(actual, fixture);
+		t.end();
 	});
 });
 
-it('stop iteration on first error', function (done) {
-	var j = 0;
-	each([1,2,3], function (el, i, next) {
+test.cb('stop iteration on first error', t => {
+	let j = 0;
+
+	m([1, 2, 3], (el, i, next) => {
 		j++;
 		next(true);
-	}, function () {
-		assert.strictEqual(j, 1);
-		done();
+	}, () => {
+		t.is(j, 1);
+		t.end();
 	});
 });
