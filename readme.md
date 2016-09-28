@@ -36,7 +36,7 @@ eachAsync(['foo','bar','baz'], (item, index, done) => {
 
 ## API
 
-### eachAsync(input, callback, finishedCallback)
+### eachAsync(input, callback, [finishedCallback])
 
 #### input
 
