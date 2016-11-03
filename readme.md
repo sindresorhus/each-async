@@ -8,6 +8,8 @@ I often use `async.each()` for doing async operations when iterating, but I almo
 
 Async iteration is one of the most used async control flow patterns.
 
+**I would strongly recommend using promises instead. You could then use the built-in [`Promise.all()`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise/all), or [`p-map`](https://github.com/sindresorhus/p-map) if you need concurrency control.**
+
 
 ## Install
 
