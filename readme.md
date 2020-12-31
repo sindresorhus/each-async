@@ -1,4 +1,4 @@
-# each-async [![Build Status](https://travis-ci.org/sindresorhus/each-async.svg?branch=master)](https://travis-ci.org/sindresorhus/each-async)
+# each-async
 
 > Async concurrent iterator (async forEach)
 
